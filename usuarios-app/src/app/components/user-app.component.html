@@ -1,0 +1,17 @@
+<div class="container my-4">
+  <h3>{{ tittle }}</h3>
+  <button class="btn btn-primary" (click)="setOpen()">
+    {{ open == true ? "Cerrar" : "Crear Usuario" }}
+  </button>
+  <div class="row">
+    <div class="col">
+      <div class="col">
+        <user
+          [users]="users"
+          (idUserEventEmitter)="removeUser($event)"
+          (selectUserEventEmitter)="setSelectedUser($event)"
+        ></user>
+      </div>
+    </div>
+  </div>
+</div>
